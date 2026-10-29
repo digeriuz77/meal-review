@@ -1,6 +1,6 @@
 ---
 name: sampling-plan-review
-description: Review a sampling plan, sampling strategy, sample size calculation, sampling methodology, survey design, or sampling frame for method appropriateness, sample size justification, frame quality, selection procedure, disaggregation feasibility, and practical feasibility. Use when a user pastes, references, or asks about a sampling plan, sample size, sampling strategy, sampling frame, survey methodology, survey design, or sampling approach.
+description: Review a sampling plan, sampling strategy, sample size calculation, sampling methodology, or sampling frame for method appropriateness, sample size justification, frame quality, selection procedure, disaggregation feasibility, and practical feasibility. Use when a user pastes, references, or asks about a sampling plan, sample size, sampling strategy, sampling frame, or sampling approach.
 argument-hint: "[paste your sampling plan or describe the sampling methodology]"
 ---
 

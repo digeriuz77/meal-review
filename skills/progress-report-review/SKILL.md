@@ -1,6 +1,6 @@
 ---
 name: progress-report-review
-description: Review a progress report, quarterly report, annual report, semi-annual report, APR, donor report, performance report, or narrative report for indicator coverage, data plausibility, disaggregation, narrative-data alignment, variance explanation, and internal consistency. Use when a user pastes, references, or asks about a progress report, monitoring report, quarterly report, annual report, semi-annual report, donor report, performance report, narrative report, APR, or PUDR.
+description: Review a progress, quarterly, semi-annual, annual or donor report for evidence coverage, arithmetic, period consistency, narrative-data alignment and supported conclusions. Use when a user pastes, references or asks about a progress report, quarterly report, annual report, APR, donor report or performance report.
 argument-hint: "[paste your progress report or describe the report structure and key indicators]"
 ---
 
@@ -35,7 +35,7 @@ If invoked with `$ARGUMENTS`, treat that as the report content to review.
 | **Semi-annual report** | Output + outcome indicators, mid-period reflection | Full review with outcome-level checks |
 | **Annual report** | All indicators, full narrative, lessons learned | Full 10-dimension review |
 | **Final/Completion report** | All indicators (cumulative), impact narrative, sustainability | Full review; assess cumulative achievement |
-| **Donor-specific format** | Per donor requirements (PUDR, ROM, etc.) | Check donor format compliance alongside quality |
+| **Funder-specific format** | Per funder requirements (named reporting template or monitoring format) | Check donor format compliance alongside quality |
 | **Partial / Draft** | Incomplete by design | Review what is present |
 
 ## Scoring Thresholds
@@ -47,7 +47,7 @@ If invoked with `$ARGUMENTS`, treat that as the report content to review.
 
 **Overall Rating:**
 - **Strong:** 0 FAIL, max 1 PARTIAL
-- **Adequate:** 0 FAIL, 2+ PARTIAL
+- **Adequate:** 0 FAIL, exactly 2 PARTIAL
 - **Needs Revision:** 1 FAIL, or 3+ PARTIAL
 - **Major Issues:** 2+ FAIL
 
@@ -55,12 +55,7 @@ If invoked with `$ARGUMENTS`, treat that as the report content to review.
 
 ## Indicator Achievement Standards
 
-| Achievement % | Rating | Interpretation |
-|---|---|---|
-| >= 100% | Exceeded | Target met or surpassed; verify data quality if significantly over |
-| 80-99% | On track | Acceptable; minor course correction may be needed |
-| 50-79% | Below target | Significant shortfall; requires explanation and action plan |
-| < 50% | Critical | Major concern; root cause analysis required |
+Calculate percentage of target only when a ratio is meaningful, the direction of improvement is known, and actual and target use the same definition and reporting basis. Show actual, target, arithmetic and gap. Percentage of target is not an on-track judgment. On-track status requires a supplied time-phased expectation and relevant context. Do not invent rating bands or classify severity from a universal percentage threshold. For lower-is-better, zero-target or signed indicators, explain an appropriate gap rather than applying a misleading achievement ratio.
 
 **Red flags:**
 - Achievement > 150% (possible data quality issue or unrealistic target)
@@ -170,15 +165,17 @@ Cross-check across report sections:
 
 > **Rule:** Report what the data says, acknowledge data quality limitations, and let findings speak rather than interpreting them favorably.
 
-## Donor-Specific Reporting Patterns
+## Funder Reporting Formats
 
-| Donor | Key Expectations |
+When the report or user names a funder format, check against it. Common formats:
+
+| Reporting format | Key Expectations |
 |---|---|
-| **USAID** | Standard indicators, AMELP alignment, evidence-based narrative, gender analysis |
-| **EU** | ROM format, logframe-based, OVI achievement, assumptions tracking |
-| **FCDO** | Logframe milestones, VfM (Economy, Efficiency, Effectiveness, Equity) |
-| **UN** | Results-based, SDG alignment, gender mainstreaming narrative |
-| **GFATM** | PUDR format, KPI tracking, programmatic-financial linkage |
+| **Standard-indicator reporting** | Funder standard indicators, alignment with the activity M&E plan, evidence-based narrative, gender analysis |
+| **Logframe monitoring** | Results-oriented monitoring format, logframe-based, OVI achievement, assumptions tracking |
+| **Milestone and value-for-money reporting** | Logframe milestones, VfM (Economy, Efficiency, Effectiveness, Equity) |
+| **Results-based management** | Results-based, SDG alignment, gender mainstreaming narrative |
+| **Grant performance framework** | Progress update and disbursement format, KPI tracking, programmatic-financial linkage |
 
 ## Methodology-Specific Flags
 
@@ -215,7 +212,7 @@ Review in this sequence, scoring each section PASS / PARTIAL / FAIL:
 ### Calculate Overall Rating
 
 - **Strong:** 0 FAIL, max 1 PARTIAL
-- **Adequate:** 0 FAIL, 2+ PARTIAL
+- **Adequate:** 0 FAIL, exactly 2 PARTIAL
 - **Needs Revision:** 1 FAIL, or 3+ PARTIAL
 - **Major Issues:** 2+ FAIL
 
@@ -276,3 +273,25 @@ Review in this sequence, scoring each section PASS / PARTIAL / FAIL:
 - For PARTIAL scores, state exactly what is present and what is missing
 - If donor-specific format, note compliance issues alongside quality issues
 - Do not recommend the same corrective action more than once across sections
+
+## Pilot intake and evidence contract
+
+This skill's criteria are the maintained review method. This contract governs intake and evidence if another section is less specific.
+
+- Browser: ask the user to upload readable documents or paste their text. Use only supplied attachments; do not search a local PC folder. Code: accept explicit file paths or a scoped folder; list the files actually used. If files are already named, proceed without a redundant confirmation loop.
+- Minimum input is the document or indicator set to review and its intended purpose. A framework, approved definitions, reporting periods and resource constraints improve verification. Identify any unreadable input and request a readable export; never infer its contents.
+- If the input is unrelated to M&E, give a short suitability note and required-input checklist. Do not manufacture a scored review. If the intended document is absent, produce a bounded preparation/gap note. Incomplete evidence must not become a fictional full document.
+- Give each source a filename and section/table identifier. Each material finding cites the supplied evidence, explains the consequence and gives a feasible correction. Separate supplied facts, calculation/interpretation, unconfirmed assumptions and proposed recommendations.
+- Keep missing, conflicting and out-of-scope evidence distinct. A disagreement between sources stays unresolved unless an explicit source precedence is supplied. Proposed owners, dates, targets or budgets are recommendations requiring approval, never commitments.
+- Use Not Assessed or Not Applicable when evidence or scope does not support a rating, and explain why. Do not treat unavailable evidence as proof of failure or success. Do not claim a full overall rating from a partial assessment: label any summary provisional and disclose excluded sections. Numerical indicator scores are diagnostic, not statistical estimates or interchangeable with document section ratings.
+- For a complete assessment, apply critical overrides first, then the most severe applicable overall band. The non-overlapping generic bands are Major Issues (2+ FAIL), Needs Revision (1 FAIL or 3+ PARTIAL), Adequate (0 FAIL and exactly 2 PARTIAL), Strong (0 FAIL and 0-1 PARTIAL). Preserve any more restrictive criterion-specific override. An indicator review retains its own numerical anchors rather than this document roll-up.
+- Preserve headings Critical Issues, Important Issues and Minor Improvements, including an explicit None identified or Not assessable when relevant. A clean heading is not evidence of a completed check.
+- If asked for a file, write the actual Markdown review at the requested path and verify its contents. Otherwise return a copyable Markdown review. A chat summary is not a substitute for the promised artifact.
+
+Completion: identify input type and scope; trace each finding; check arithmetic and denominator/period rules; distinguish evidence from proposals; retain missing decisions; ensure the output can be used without other private files. Use US English and no em dashes. See START.md for the starter and fictional example.
+
+Single-period reports permit period and target checks only. A baseline or end target is not a previous reporting period. For two periods, confirm comparable definitions, populations, denominators and period/cumulative basis; show percentage-point versus relative change and forbid unsupported causal claims. Do not sum cumulative totals.
+
+## Resume from saved work
+
+Resume only from the supplied source documents, actual prior review and handover. Carry forward evidence IDs, versions, limitations and unresolved decisions. Identify changed or new sources and recheck affected findings. Do not treat a previous suggestion as an approved decision. Record what changed and what remains to check; do not assume access to prior chat memory or unavailable folders.

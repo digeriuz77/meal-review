@@ -13,3 +13,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Maintainer instructions stay local
+CLAUDE.md

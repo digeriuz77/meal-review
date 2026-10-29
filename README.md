@@ -1,6 +1,6 @@
 # M&E Review
 
-[![Version](https://img.shields.io/badge/version-1.4.0-0B4F6C)](https://github.com/mestudiohq/me-review/releases)
+[![Version](https://img.shields.io/badge/version-1.5.0-0B4F6C)](https://github.com/mestudiohq/me-review/releases)
 [![License](https://img.shields.io/badge/license-MIT-3AA6A0)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-D97706)](https://code.claude.com/docs/en/plugins)
 
@@ -10,7 +10,7 @@ Paste a logframe, theory of change, M&E plan, survey, evaluation TOR, sampling p
 
 Built by [M&E Studio](https://www.monitoringevaluationstudio.com/plugins).
 
-**New in 1.4.0:** the plugin now ships as its own marketplace, so installation is two commands (see below). Each review is a single self-contained skill.
+**New in 1.5.0:** the me-workspace plugin adds twelve job skills and three workflow packs, and each skill description now says which skill owns which job. The plugin ships as its own marketplace, so installation is two commands (see below). Each review is a single self-contained skill.
 
 **New in 1.3.0:** six additional reviews covering theories of change, proposal M&E sections, sampling plans, data quality assessments, baseline reports and progress reports. Twelve reviews in total.
 
@@ -47,6 +47,16 @@ Run these inside Claude Code. If the install summary says `Run /reload-plugins t
 To check it worked, type `/me-review:` and you should see all twelve reviews listed.
 
 Claude Desktop users can install the same plugin through the plugin browser in **Settings**.
+
+### Companion Plugin: me-workspace (free)
+
+The same marketplace holds **me-workspace**, for Claude Code. It reads a whole project folder: 11 checks compare your documents against each other (TOR against logframe, M&E plan coherence, progress-report coverage), and 8 creates draft new M&E documents with source tags. Install it after adding the marketplace:
+
+```
+/plugin install me-workspace@me-review
+```
+
+Details: [plugins/me-workspace](plugins/me-workspace/README.md).
 
 ## How to Use
 

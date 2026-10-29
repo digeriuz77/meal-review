@@ -1,6 +1,6 @@
 ---
 name: tor-review
-description: Review an evaluation Terms of Reference (TOR) for methodological rigor, scope feasibility, ethical compliance, team composition, and budget realism. Use when a user pastes, references, or asks about an evaluation TOR, terms of reference, scope of work, SOW, evaluation brief, commissioning brief, evaluation RFP, or request for proposals for evaluation.
+description: Review an evaluation terms of reference (TOR), scope of work (SOW), commissioning brief or evaluation RFP for answerability, feasibility, ethics, team, budget and clear commissioning requirements. Use when a user pastes, references or asks about an evaluation TOR, terms of reference, SOW, evaluation brief or request for proposals for an evaluation.
 argument-hint: "[paste your TOR or describe the evaluation]"
 ---
 
@@ -54,7 +54,7 @@ Before reviewing, identify the document type. Different documents warrant differ
 
 **Overall Rating (based on section scores):**
 - **Strong:** 0 FAIL, max 1 PARTIAL
-- **Adequate:** 0 FAIL, 2+ PARTIAL
+- **Adequate:** 0 FAIL, exactly 2 PARTIAL
 - **Needs Revision:** 1 FAIL, or 3+ PARTIAL
 - **Major Issues:** 2+ FAIL
 
@@ -77,8 +77,8 @@ A quality TOR should include:
 ### 2. Evaluation Questions Quality
 
 **Criteria alignment:**
-- Questions map to OECD-DAC criteria (relevance, coherence, effectiveness, efficiency, impact, sustainability)
-- No criterion overloaded while others empty
+- Select OECD-DAC criteria according to the evaluation purpose, context and decision needs; document which are relevant and why
+- Allocate questions to relevant criteria without forcing coverage of all six; an omitted criterion is not automatically a defect
 - Questions match evaluation type (process evaluation shouldn't focus on impact)
 
 **Answerability:**
@@ -121,7 +121,7 @@ A quality TOR should include:
 
 > **Rule:** Three basic ethical principles must guide data collection: respect, do no harm, and non-discrimination.
 
-> **Rule:** All data collection tools must be reviewed using an Ethics Review Checklist by at least two staff prior to use.
+Require a proportionate documented ethics/tool review appropriate to context and applicable policy. Do not impose an unprovided organizational checklist or reviewer count as a universal standard.
 
 > **Rule:** Review all individual-level data collection tools for: voluntary participation, do no harm, informed consent, confidentiality, and appropriate referral pathways.
 
@@ -140,11 +140,11 @@ A quality TOR should include:
 ### 6. Deliverables and Timeline
 
 - All deliverables clearly defined (inception report, draft, final, presentation, brief)
-- Timeline allows adequate time per phase (inception 2-4 weeks, data collection 2-3+ weeks, analysis 3-6 weeks, finalization 2-4 weeks)
+- Timeline accounts for stated scope, evaluator days, access, travel, analysis and review rounds; assess feasibility from those constraints rather than universal phase durations
 - Review cycles specified (who reviews, how many rounds, turnaround time)
 - Quality assurance process defined
 
-**Common problems:** 6-week timeline for national mixed-methods evaluation, no revision time, unfunded deliverables, no inception phase
+**Common problems:** Scope exceeding available effort or access, no revision time, unfunded deliverables, no preparation or inception provision appropriate to the evaluation
 
 ### 7. Budget Realism
 
@@ -153,14 +153,14 @@ A quality TOR should include:
 - Payment terms specified
 - Budget matches ambition
 
-**Red flags:** <$50K for multi-site mixed-methods, no translation budget in multi-language contexts, no local data collection teams budget, international travel on domestic budget
+**Feasibility checks:** Compare stated resources with required effort, locations, access, languages and logistics. Missing cost assumptions are an unresolved feasibility decision, not proof that a universal budget threshold was breached.
 
 ### 8. Standards Alignment
 
 Check that the TOR aligns with recognized evaluation standards:
 
-**Universal standards:**
-- OECD-DAC evaluation criteria (relevance, coherence, effectiveness, efficiency, impact, sustainability)
+**Potentially relevant frameworks, selected by purpose and context:**
+- OECD-DAC criteria selected thoughtfully for intended use; do not require all six
 - UNEG Norms and Standards (independence, credibility, utility)
 - American Evaluation Association (AEA) Guiding Principles
 
@@ -169,7 +169,7 @@ Check that the TOR aligns with recognized evaluation standards:
 - Check terminology matches donor expectations
 - Confirm required deliverables/registrations are mentioned
 
-**Common donor frameworks:** EU (ROM standards, DAC criteria), FCDO (Theory of Change, Value for Money using 4 Es), UN agencies (UNEG norms, independence requirements). If the donor isn't named, default to OECD-DAC alignment.
+Apply commissioning requirements only when supplied or independently verified as applicable. Otherwise explain the chosen quality framework and relevant criteria; do not invent mandatory donor policies or an all-six DAC requirement.
 
 ### 9. Practical Readiness
 
@@ -211,7 +211,7 @@ Review in this sequence, scoring each section PASS / PARTIAL / FAIL:
 5. **Team & LOE**: Qualifications specific? National expertise? LOE realistic?
 6. **Timeline**: Adequate time per phase? Review cycles defined?
 7. **Budget**: Ceiling provided? Inclusions/exclusions clear? Matches ambition?
-8. **Standards Alignment**: Aligned with OECD-DAC, UNEG, and any named donor's evaluation standards?
+8. **Standards Alignment**: Aligned with OECD-DAC, UNEG, and any named funder's evaluation standards?
 9. **Practical Readiness**: Data sources listed? Prior evaluations referenced? Language needs? Dissemination plan?
 10. **Internal Consistency**: Cross-check: scope vs. budget, questions vs. methodology, timeline vs. deliverables, team vs. methodology, ethics vs. scope?
 
@@ -226,7 +226,7 @@ For each finding, classify:
 
 Based on section scores:
 - **Strong:** 0 FAIL, max 1 PARTIAL
-- **Adequate:** 0 FAIL, 2+ PARTIAL
+- **Adequate:** 0 FAIL, exactly 2 PARTIAL
 - **Needs Revision:** 1 FAIL, or 3+ PARTIAL
 - **Major Issues:** 2+ FAIL
 
@@ -286,3 +286,27 @@ When recommending changes, provide specific language the user can insert, not ju
 - If the TOR is generally strong, say so. Not every TOR needs major revision.
 - **Post-hoc review:** If the evaluation is already underway or completed, reframe Critical/Important findings as lessons for future TOR development. Not required fixes.
 - For program design review beyond the evaluation scope, use `/me-review:logframe-review`.
+
+## Pilot intake and evidence contract
+
+If no TOR is included, say "No TOR was supplied in this input." Do not say that no TOR exists, was written or was approved. The absence of an attachment establishes only input availability, not the existence or status of a real-world document. Give a bounded preparation note, not a scored review of an imaginary TOR.
+
+This skill's criteria are the maintained review method. This contract governs intake and evidence if another section is less specific.
+
+- Browser: ask the user to upload readable documents or paste their text. Use only supplied attachments; do not search a local PC folder. Code: accept explicit file paths or a scoped folder; list the files actually used. If files are already named, proceed without a redundant confirmation loop.
+- Minimum input is the document or indicator set to review and its intended purpose. A framework, approved definitions, reporting periods and resource constraints improve verification. Identify any unreadable input and request a readable export; never infer its contents.
+- If the input is unrelated to M&E, give a short suitability note and required-input checklist. Do not manufacture a scored review. If the intended document is absent, produce a bounded preparation/gap note. Incomplete evidence must not become a fictional full document.
+- Give each source a filename and section/table identifier. Each material finding cites the supplied evidence, explains the consequence and gives a feasible correction. Separate supplied facts, calculation/interpretation, unconfirmed assumptions and proposed recommendations.
+- Keep missing, conflicting and out-of-scope evidence distinct. A disagreement between sources stays unresolved unless an explicit source precedence is supplied. Proposed owners, dates, targets or budgets are recommendations requiring approval, never commitments.
+- Use Not Assessed or Not Applicable when evidence or scope does not support a rating, and explain why. Do not treat unavailable evidence as proof of failure or success. Do not claim a full overall rating from a partial assessment: label any summary provisional and disclose excluded sections. Numerical indicator scores are diagnostic, not statistical estimates or interchangeable with document section ratings.
+- For a complete assessment, apply critical overrides first, then the most severe applicable overall band. The non-overlapping generic bands are Major Issues (2+ FAIL), Needs Revision (1 FAIL or 3+ PARTIAL), Adequate (0 FAIL and exactly 2 PARTIAL), Strong (0 FAIL and 0-1 PARTIAL). Preserve any more restrictive criterion-specific override. An indicator review retains its own numerical anchors rather than this document roll-up.
+- Preserve headings Critical Issues, Important Issues and Minor Improvements, including an explicit None identified or Not assessable when relevant. A clean heading is not evidence of a completed check.
+- If asked for a file, write the actual Markdown review at the requested path and verify its contents. Otherwise return a copyable Markdown review. A chat summary is not a substitute for the promised artifact.
+
+Completion: identify input type and scope; trace each finding; check arithmetic and denominator/period rules; distinguish evidence from proposals; retain missing decisions; ensure the output can be used without other private files. Use US English and no em dashes. See START.md for the starter and fictional example.
+
+Method note: OECD guidance says criteria selection depends on evaluation purpose. Public reference: https://www.oecd.org/en/topics/sub-issues/development-co-operation-evaluation-and-effectiveness/evaluation-criteria.html . Do not prescribe representative precision from purposive interviews or an impact design without the required evidence.
+
+## Resume from saved work
+
+Resume only from the supplied source documents, actual prior review and handover. Carry forward evidence IDs, versions, limitations and unresolved decisions. Identify changed or new sources and recheck affected findings. Do not treat a previous suggestion as an approved decision. Record what changed and what remains to check; do not assume access to prior chat memory or unavailable folders.

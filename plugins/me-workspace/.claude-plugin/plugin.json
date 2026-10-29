@@ -1,0 +1,12 @@
+{
+  "name": "me-workspace",
+  "description": "Free M&E workflows for Claude Code. Point Claude at a project folder to check documents against each other, draft evaluation questions, TORs, indicator sheets, M&E plans, sampling, baseline and data quality plans, and turn findings into proposed actions.",
+  "author": {
+    "name": "MEStudio",
+    "email": "contact@monitoringevaluationstudio.com"
+  },
+  "version": "1.1.0",
+  "homepage": "https://www.monitoringevaluationstudio.com/plugins",
+  "repository": "https://github.com/mestudiohq/me-review",
+  "license": "MIT"
+}

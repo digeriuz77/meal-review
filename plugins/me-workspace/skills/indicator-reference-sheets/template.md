@@ -1,0 +1,25 @@
+# Indicator reference sheet template
+
+Copy one section per indicator. Replace bracketed instructions with supplied information or an explicit missing status.
+
+## [Indicator name]
+- **Source ID / framework row:** [ID and row]
+- **Result statement and level:** [statement; level; rationale]
+- **Type and standard/custom status:** [evidence]
+- **Operational definition:** [construct, inclusion/exclusion, population universe, observation window]
+- **Numerator / denominator / formula:** [exact rule or Not supplied]
+- **Unit:** [unit]
+- **Baseline:** [value, period, source, method, or Not supplied]
+- **Target(s):** [value, due period, rationale, approval status, or Not supplied]
+- **Disaggregation:** [categories and feasibility]
+- **Data source / collection tool / method:** [details or Not supplied]
+- **Collection frequency / reporting frequency:** [separate values]
+- **Responsible roles:** [collection, analysis, reporting, QA, or Not supplied]
+- **Data-quality risks and QA:** [risk and check]
+- **Missing-data treatment:** [rule or Decision required]
+- **Intended use:** [decision/reporting use]
+- **Evidence IDs:** [filename#heading, page, table, or row]
+- **Assumptions:** [explicit list]
+- **Proposed recommendations:** [clearly marked]
+- **Decisions and approvals required:** [list]
+- **Change history:** [what changed, source, approval status]

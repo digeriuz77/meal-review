@@ -38,18 +38,18 @@ If no logframe is provided, prompt the user to supply one.
 
 **Non-text input:** If the user provides an image or screenshot, ask them to paste the content as text or table.
 
-## Donor Terminology Mapping
+## Funder Terminology Mapping
 
-Different donors use different hierarchy terms. Map to standard before reviewing:
+Different funders use different hierarchy terms. Map to standard before reviewing:
 
-| Standard | EU (LFA) | DFID/FCDO | UN | Other Common |
+| Standard | LFA format | Impact-Outcome-Output format | UN format | Other Common |
 |----------|----------|-----------|-----|--------------|
 | Goal | Overall Objective | Impact | Pillar/Goal | Strategic Objective |
 | Outcome | Specific Objective | Outcome | Priority | Intermediate Result |
 | Output | Result / Expected Result | Output | Output | Sub-Result |
 | Activity | Activity | Activity | Activity | Activity |
 
-**EU Logical Framework Approach (LFA) specifics:** EU logframes use "Intervention Logic" (not "Narrative Summary"), "OVIs" or "Objectively Verifiable Indicators" (not just "Indicators"), "Sources of Verification" (not "Means of Verification"), and "Pre-conditions" at the activity level (instead of assumptions). EU design rules require exactly ONE Specific Objective per logframe and typically 3-6 Results. Do not penalize for EU-specific conventions.
+**Logical Framework Approach (LFA) format specifics:** LFA-format logframes use "Intervention Logic" (not "Narrative Summary"), "OVIs" or "Objectively Verifiable Indicators" (not just "Indicators"), "Sources of Verification" (not "Means of Verification"), and "Pre-conditions" at the activity level (instead of assumptions). LFA design rules require exactly ONE Specific Objective per logframe and typically 3-6 Results. Do not penalize for LFA-format conventions.
 
 ## Scoring Thresholds
 
@@ -90,7 +90,7 @@ Different donors use different hierarchy terms. Map to standard before reviewing
 - Activities have process milestones or completion criteria (not outcome-level indicators)
 - Each indicator has a specified data source
 - Assumptions present at each level transition
-- Pre-conditions stated at the activity level (EU LFA format)
+- Pre-conditions stated at the activity level (LFA format)
 
 > **Rule:** The logframe consists of (1) Intervention Logic, (2) Objectively Verifiable Indicators, (3) Sources and Means of Verification, and (4) Assumptions. All four must be present.
 
@@ -160,7 +160,7 @@ Rapid SMART assessment per indicator:
 
 Flag any indicator that fails 2+ SMART criteria.
 
-**EU OVI check:** If indicators are labeled as OVIs, also check QQQTT: Quantity, Quality, target group (Qui), Time, and place (Territoire). Apply QQQTT rather than penalizing for not following SMART naming.
+**OVI check:** If indicators are labeled as OVIs, also check QQQTT: Quantity, Quality, target group (Qui), Time, and place (Territoire). Apply QQQTT rather than penalizing for not following SMART naming.
 
 > **Note:** This is a rapid surface check. For full per-indicator SMART/CREAM scoring, use `/me-review:indicator-quality`.
 
@@ -219,7 +219,7 @@ Based on section scores:
 - **Needs Revision:** 1 FAIL, or 3+ PARTIAL
 - **Major Issues:** 2+ FAIL
 
-**Note:** A FAIL in Structural Completeness or Vertical Logic automatically triggers Major Issues regardless of other scores. For EU logframes, do not penalize pre-conditions at the activity level. These are a convention (not a flaw) and should not trigger a FAIL in Assumptions.
+**Note:** A FAIL in Structural Completeness or Vertical Logic automatically triggers Major Issues regardless of other scores. For LFA-format logframes, do not penalize pre-conditions at the activity level. These are a convention (not a flaw) and should not trigger a FAIL in Assumptions.
 
 ## Output Format
 

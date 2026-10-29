@@ -1,6 +1,6 @@
 ---
 name: me-plan-review
-description: Review a monitoring and evaluation plan, MEAL plan, Performance Management Plan (PMP), MEL plan, or indicator framework for completeness, indicator quality, data collection feasibility, roles and responsibilities, reporting schedule, and quality assurance provisions. Use when a user pastes, references, or asks about an M&E plan, MEL plan, MEAL plan, monitoring plan, PMP, performance management plan, indicator framework, indicator reference sheets, data management plan, results measurement plan, M&E framework, or PIRS.
+description: Review an M&E, MEL or MEAL plan, performance management plan (PMP) or indicator framework for practical collection, roles, indicator definitions, resources, reporting and coherence. Use when a user pastes, references or asks about an M&E plan, MEL plan, MEAL plan, PMP, monitoring plan or indicator reference sheets (PIRS).
 argument-hint: "[paste your M&E plan or describe the plan structure]"
 ---
 
@@ -41,7 +41,7 @@ Before reviewing, identify the document type. Different documents have different
 | **Indicator Framework / Reference Sheets** | Indicator definitions + data sources only | Focus on Sections 2 and 3; note that Sections 4-7 are intentionally out of scope |
 | **M&E Framework (high-level)** | Strategic overview without operational detail | Note strategic gaps; acknowledge operational detail may be in a companion document |
 | **Data Management Plan** | Data systems and quality focus | Review Sections 3, 5, 6; Sections 4 and 7 may be out of scope |
-| **MEL Plan (USAID)** | Results framework + indicator reference sheets + learning agenda | Apply full review; check for USAID-specific requirements (PIRS, ADS 201) |
+| **MEL Plan (funder format)** | Results framework + indicator reference sheets + learning agenda | Apply full review; check the funder's own requirements when the document names them (for example performance indicator reference sheets) |
 | **Partial / Draft** | Incomplete by design. Sections are missing or explicitly placeholder | Review what is present; flag missing sections as "needs development" rather than FAIL unless foundational |
 
 **Important distinction:** A plan that has all sections present but is vague, aspirational, or operationally weak is NOT a "Partial / Draft". It is a Full M&E/MEAL Plan that scores PARTIAL or FAIL on the relevant sections. Reserve "Partial / Draft" for documents where sections are structurally absent, not just poorly written.
@@ -55,7 +55,7 @@ Before reviewing, identify the document type. Different documents have different
 
 **Overall Rating (based on section scores):**
 - **Strong:** 0 FAIL, max 1 PARTIAL
-- **Adequate:** 0 FAIL, 2+ PARTIAL
+- **Adequate:** 0 FAIL, exactly 2 PARTIAL
 - **Needs Revision:** 1 FAIL, or 3+ PARTIAL
 - **Major Issues:** 2+ FAIL
 
@@ -87,7 +87,7 @@ A complete M&E plan includes:
 ### 2. Indicator Framework Quality
 
 Assess whether the indicator set is coherent and measurable at the framework level:
-- Indicators at every result level (output through goal/impact)
+- Indicators cover the results and reporting obligations within the program's measurement scope; do not require goal-level attribution when the design cannot support it
 - Not dominated by activity counts
 - Each indicator has: definition, data source, baseline, target, reporting frequency, disaggregation dimensions
 - Standard indicators used where applicable (WHO, SDG, donor frameworks, sector-specific)
@@ -238,7 +238,7 @@ Review in this sequence, scoring each section PASS / PARTIAL / FAIL:
 ### Calculate Overall Rating
 
 - **Strong:** 0 FAIL, max 1 PARTIAL
-- **Adequate:** 0 FAIL, 2+ PARTIAL
+- **Adequate:** 0 FAIL, exactly 2 PARTIAL
 - **Needs Revision:** 1 FAIL, or 3+ PARTIAL
 - **Major Issues:** 2+ FAIL
 
@@ -315,3 +315,25 @@ Review in this sequence, scoring each section PASS / PARTIAL / FAIL:
 - For PARTIAL scores, state exactly what is present and what is missing
 - For narrative/incomplete inputs, distinguish between "not present" and "not confirmed present"
 - Do not recommend using `/me-review:indicator-quality` more than once (Section 2 is sufficient)
+
+## Pilot intake and evidence contract
+
+This skill's criteria are the maintained review method. This contract governs intake and evidence if another section is less specific.
+
+- Browser: ask the user to upload readable documents or paste their text. Use only supplied attachments; do not search a local PC folder. Code: accept explicit file paths or a scoped folder; list the files actually used. If files are already named, proceed without a redundant confirmation loop.
+- Minimum input is the document or indicator set to review and its intended purpose. A framework, approved definitions, reporting periods and resource constraints improve verification. Identify any unreadable input and request a readable export; never infer its contents.
+- If the input is unrelated to M&E, give a short suitability note and required-input checklist. Do not manufacture a scored review. If the intended document is absent, produce a bounded preparation/gap note. Incomplete evidence must not become a fictional full document.
+- Give each source a filename and section/table identifier. Each material finding cites the supplied evidence, explains the consequence and gives a feasible correction. Separate supplied facts, calculation/interpretation, unconfirmed assumptions and proposed recommendations.
+- Keep missing, conflicting and out-of-scope evidence distinct. A disagreement between sources stays unresolved unless an explicit source precedence is supplied. Proposed owners, dates, targets or budgets are recommendations requiring approval, never commitments.
+- Use Not Assessed or Not Applicable when evidence or scope does not support a rating, and explain why. Do not treat unavailable evidence as proof of failure or success. Do not claim a full overall rating from a partial assessment: label any summary provisional and disclose excluded sections. Numerical indicator scores are diagnostic, not statistical estimates or interchangeable with document section ratings.
+- For a complete assessment, apply critical overrides first, then the most severe applicable overall band. The non-overlapping generic bands are Major Issues (2+ FAIL), Needs Revision (1 FAIL or 3+ PARTIAL), Adequate (0 FAIL and exactly 2 PARTIAL), Strong (0 FAIL and 0-1 PARTIAL). Preserve any more restrictive criterion-specific override. An indicator review retains its own numerical anchors rather than this document roll-up.
+- Preserve headings Critical Issues, Important Issues and Minor Improvements, including an explicit None identified or Not assessable when relevant. A clean heading is not evidence of a completed check.
+- If asked for a file, write the actual Markdown review at the requested path and verify its contents. Otherwise return a copyable Markdown review. A chat summary is not a substitute for the promised artifact.
+
+Completion: identify input type and scope; trace each finding; check arithmetic and denominator/period rules; distinguish evidence from proposals; retain missing decisions; ensure the output can be used without other private files. Use US English and no em dashes. See START.md for the starter and fictional example.
+
+## Resume from saved work
+
+Check status language: "existing" does not mean approved; approval evidence not supplied does not mean unapproved or rejected. Use "approval status not supplied" unless the source confirms the status. Likewise, absence of a consent, collection or QA record in the supplied files does not establish that the real-world action never happened.
+
+Resume only from the supplied source documents, actual prior review and handover. Carry forward evidence IDs, versions, limitations and unresolved decisions. Identify changed or new sources and recheck affected findings. Do not treat a previous suggestion as an approved decision. Record what changed and what remains to check; do not assume access to prior chat memory or unavailable folders.

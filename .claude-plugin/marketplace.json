@@ -6,15 +6,15 @@
     "url": "https://www.monitoringevaluationstudio.com"
   },
   "metadata": {
-    "description": "Monitoring and evaluation document reviews for Claude.",
-    "version": "1.4.0"
+    "description": "Free monitoring and evaluation reviews and workflows for Claude.",
+    "version": "1.5.0"
   },
   "plugins": [
     {
       "name": "me-review",
       "source": "./",
       "description": "Twelve structured M&E document reviews: logframes, theories of change, indicators, evaluation TORs, M&E plans, proposals, sampling plans, surveys, baseline reports, progress reports, data quality assessments, and evaluation reports. Each returns section-by-section PASS/PARTIAL/FAIL ratings, a summary verdict, and prioritized recommendations.",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "MEStudio",
         "url": "https://www.monitoringevaluationstudio.com"
@@ -29,6 +29,29 @@
         "evaluation",
         "logframe",
         "theory-of-change",
+        "international-development",
+        "nonprofit"
+      ]
+    },
+    {
+      "name": "me-workspace",
+      "source": "./plugins/me-workspace",
+      "description": "Free M&E workflows for Claude Code. Point Claude at a project folder to check documents against each other, draft evaluation questions, TORs, indicator sheets, M&E plans, sampling, baseline and data quality plans, and turn findings into proposed actions.",
+      "version": "1.1.0",
+      "author": {
+        "name": "MEStudio",
+        "url": "https://www.monitoringevaluationstudio.com"
+      },
+      "homepage": "https://www.monitoringevaluationstudio.com/plugins",
+      "repository": "https://github.com/mestudiohq/me-review",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "monitoring-evaluation",
+        "meal",
+        "evaluation",
+        "me-plan",
+        "tor",
         "international-development",
         "nonprofit"
       ]

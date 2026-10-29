@@ -150,14 +150,16 @@ Dedicated M&E capacity:
 
 **Common problems:** No dedicated M&E staff, single officer for multi-country program, M&E added to program staff without LOE
 
-## Donor-Specific M&E Patterns
+## Funder M&E Formats
 
-| Donor | Key M&E Expectations |
+When the call or user names a funder format, check against it. Common formats:
+
+| Format | Key M&E Expectations |
 |---|---|
-| **USAID** | Results framework, AMELP, CLA, standard indicators, DQA, midterm/final evaluation |
-| **EU** | LFA, ROM monitoring, DAC criteria, OVIs, Sources of Verification |
-| **FCDO** | ToC, VfM (Economy, Efficiency, Effectiveness, Equity), logframe milestones |
-| **UN** | Results-based management, UNEG norms, gender-responsive M&E, SDG alignment |
+| **Results framework format** | Results framework, activity M&E plan, collaborating-learning-adapting approach, standard indicators, DQA, midterm/final evaluation |
+| **LFA format** | LFA, results-oriented monitoring, DAC criteria, OVIs, Sources of Verification |
+| **Theory of change and value-for-money format** | ToC, VfM (Economy, Efficiency, Effectiveness, Equity), logframe milestones |
+| **UN format** | Results-based management, UNEG norms, gender-responsive M&E, SDG alignment |
 | **Foundations** | Varies widely; focus on learning and outcomes narrative |
 
 ## Common Proposal M&E Flaws
